@@ -1,5 +1,4 @@
 import "./App.css";
-import { Button } from "@/components/ui/button";
 import { ExampleFetch } from "./ExampleFetch";
 import { QueryClient, QueryClientProvider } from "react-query";
 
@@ -11,13 +10,11 @@ function App() {
   return (
     <>
       <QueryClientProvider client={queryClient}>
-        <div className="flex flex-col max-w-screen-lg ">
-          <h1 className="text-red-800 text-5xl font-bold mb-2">
-            Hello, world!
-          </h1>
-          <Button variant={"outline"}>Hello from shadcn!</Button>
-          <ExampleFetch />
-        </div>
+        <main className="max-w-screen-lg mx-auto pt-10">
+          <div className="flex flex-col align-middle gap-8">
+            <ExampleFetch />
+          </div>
+        </main>
         <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>
     </>
